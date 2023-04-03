@@ -1,7 +1,7 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import litLogo from "./assets/lit.svg";
-import { TailwindElement } from "./global/tailwind.element";
+import { TailwindElement } from "../../../global/tailwind.element";
 import viteLogo from "/vite.svg";
 
 /**
@@ -10,8 +10,8 @@ import viteLogo from "/vite.svg";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement("my-element")
-export class MyElement extends TailwindElement() {
+@customElement("base-button2")
+export class BaseButton extends TailwindElement() {
   /**
    * Copy for the read the docs hint.
    */
@@ -44,6 +44,6 @@ export class MyElement extends TailwindElement() {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "my-element": MyElement;
+    "base-button2": BaseButton;
   }
 }

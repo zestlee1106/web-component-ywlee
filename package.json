@@ -1,9 +1,8 @@
 {
   "name": "web-component-ywlee",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
   "main": "dist/my-element.es.js",
+  "module": "my-element.ts",
   "exports": {
     ".": "./dist/my-element.es.js"
   },
@@ -14,13 +13,17 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "vite build"
   },
   "dependencies": {
-    "lit": "^2.6.1"
+    "lit": "^2.4.0"
   },
   "devDependencies": {
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.2.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
   }
 }
