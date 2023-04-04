@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "yarn clean && tsc && vite build",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "lit": "^2.4.0"
