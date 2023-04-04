@@ -14,7 +14,7 @@ export default class BaseButton extends BaseButton_base {
      * The number of times the button has been clicked.
      */
     count: number;
-    render(): import("lit").TemplateResult<1>;
+    render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
