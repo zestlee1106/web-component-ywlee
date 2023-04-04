@@ -1,8 +1,6 @@
-import { LitElement, css, html } from "lit";
+import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import litLogo from "./assets/lit.svg";
 import { TailwindElement } from "../../../global/tailwind.element";
-import viteLogo from "/vite.svg";
 
 /**
  * An example element.
@@ -10,8 +8,8 @@ import viteLogo from "/vite.svg";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement("base-button2")
-export class BaseButton extends TailwindElement() {
+@customElement("base-button")
+export default class BaseButton extends TailwindElement() {
   /**
    * Copy for the read the docs hint.
    */
@@ -25,25 +23,12 @@ export class BaseButton extends TailwindElement() {
   count = 0;
 
   render() {
-    return html`
-      <div class="mr-3">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
-        </a>
-      </div>
-    `;
-  }
-
-  private _onClick() {
-    this.count++;
+    return html` <div class="mr-3">버튼</div> `;
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "base-button2": BaseButton;
+    "base-button": BaseButton;
   }
 }

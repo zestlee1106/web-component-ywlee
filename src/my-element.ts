@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import litLogo from "./assets/lit.svg";
 import { TailwindElement } from "./global/tailwind.element";
@@ -11,7 +11,7 @@ import viteLogo from "/vite.svg";
  * @csspart button - The button
  */
 @customElement("my-element")
-export class MyElement extends TailwindElement() {
+export default class MyElement extends TailwindElement() {
   /**
    * Copy for the read the docs hint.
    */
@@ -35,10 +35,6 @@ export class MyElement extends TailwindElement() {
         </a>
       </div>
     `;
-  }
-
-  private _onClick() {
-    this.count++;
   }
 }
 
